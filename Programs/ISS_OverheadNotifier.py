@@ -5,8 +5,8 @@ import smtplib
 
 MY_LAT = 20.593683  # from latlong website
 MY_LONG = 78.962883
-MY_EMAIL = "anabaabbas4@gmail.com"
-A_PASSWORD = "vgjklnseqjzbojbf"
+MY_EMAIL = "[SENDER EMAIL]"
+A_PASSWORD = "[APP PASSWORD]"
 
 
 def is_near():
@@ -44,10 +44,11 @@ while True:
             connection.starttls()
             connection.login(user=MY_EMAIL, password=A_PASSWORD)
             connection.sendmail(from_addr=MY_EMAIL,
-                                to_addrs="explorers331@gmail.com",
-                                msg="Subject:ISS\n\nLook up in the sky, ISS is close to you"
+                                to_addrs="[RECIPIENT EMAIL]",
+                                msg="Subject:ISS\n\nLook up in the sky, ISS is above you"
                                 )
 
+# Status codes
 # 1XX - Hold on
 # 2XX - Here you go
 # 3XX - Go away
